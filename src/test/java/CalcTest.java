@@ -2,6 +2,7 @@ import org.example.mathFunctions.CalculatorLogic;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalcTest {
     @Test
@@ -38,6 +39,7 @@ public class CalcTest {
 
         final double expected = 5 / 4.0;
         assertEquals(expected, result);
+        assertThrows(IllegalArgumentException.class, () -> cl.divNumbers(value1, 0.0));
     }
 
     @Test
