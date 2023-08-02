@@ -20,7 +20,7 @@ public class Calculator implements ActionListener {
     Font myFont = new Font("Bold font", Font.BOLD, 30);
     double num1 = 0, num2 = 0, result = 0;
     char operator;
-    CalculatorLogic sum = new CalculatorLogic();
+    CalculatorLogic cl = new CalculatorLogic();
     String currentInput = "";
 
     Calculator() {
@@ -93,7 +93,7 @@ public class Calculator implements ActionListener {
         }
         delButton.setBounds(320, 80, 30, 30);
         equButton.setBounds(290, 430, 60, 60);
-        equButton.setBackground(new Color(	232, 114, 211));
+        equButton.setBackground(new Color(232, 114, 211));
     }
 
     public void setPanel() {
@@ -171,16 +171,16 @@ public class Calculator implements ActionListener {
 
             switch (operator) {
                 case '+':
-                    result = sum.sumNumbers(num1, num2);
+                    result = cl.sumNumbers(num1, num2);
                     break;
                 case '-':
-                    result = sum.subNumbers(num1, num2);
+                    result = cl.subNumbers(num1, num2);
                     break;
                 case '*':
-                    result = sum.mulNumbers(num1, num2);
+                    result = cl.mulNumbers(num1, num2);
                     break;
                 case '/':
-                    result = sum.divNumbers(num1, num2);
+                    result = cl.divNumbers(num1, num2);
                     break;
             }
             textField.setText(String.valueOf(result));
