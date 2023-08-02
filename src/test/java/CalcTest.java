@@ -1,13 +1,23 @@
 import org.example.mathFunctions.CalculatorLogic;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalcTest {
+    private static CalculatorLogic cl;
+    @BeforeEach
+    public void setUp(){
+        cl = new CalculatorLogic();
+    }
+    @AfterEach
+    public void tearDown(){
+        cl = null;
+    }
     @Test
     public void testSum() {
-        CalculatorLogic cl = new CalculatorLogic();
         double value1 = 5;
         double value2 = 4;
 
@@ -19,7 +29,6 @@ public class CalcTest {
 
     @Test
     public void testSub() {
-        CalculatorLogic cl = new CalculatorLogic();
         double value1 = 5;
         double value2 = 4;
 
@@ -31,7 +40,6 @@ public class CalcTest {
 
     @Test
     public void testDiv() {
-        CalculatorLogic cl = new CalculatorLogic();
         double value1 = 5;
         double value2 = 4;
 
@@ -44,7 +52,6 @@ public class CalcTest {
 
     @Test
     public void testMul() {
-        CalculatorLogic cl = new CalculatorLogic();
         double value1 = 5;
         double value2 = 4;
 
