@@ -1,3 +1,5 @@
+package org.example;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,14 +9,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorLogicTest {
     private static CalculatorLogic cl;
+
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         cl = new CalculatorLogic();
     }
+
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         cl = null;
     }
+
     @Test
     public void testSum() {
         //Given

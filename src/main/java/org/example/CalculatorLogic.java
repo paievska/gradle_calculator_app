@@ -1,3 +1,5 @@
+package org.example;
+
 public class CalculatorLogic {
 
     public double sumNumbers(double num1, double num2) {

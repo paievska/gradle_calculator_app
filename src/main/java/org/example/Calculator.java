@@ -1,3 +1,5 @@
+package org.example;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -37,7 +39,7 @@ public class Calculator implements ActionListener {
     }
 
     public void initializeUI() {
-        frame = new JFrame("Calculator");
+        frame = new JFrame("org.example.Calculator");
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/calculator.png")));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
