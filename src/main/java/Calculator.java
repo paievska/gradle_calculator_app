@@ -1,7 +1,3 @@
-package org.example;
-
-import org.example.mathFunctions.CalculatorLogic;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
